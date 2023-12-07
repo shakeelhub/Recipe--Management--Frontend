@@ -1,38 +1,355 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Poppins:wght@300&family=Roboto:wght@500;700&family=Source+Code+Pro:ital@1&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+  background-color: rgb(212, 216, 216);
+}
+
+/* Container for the Signup form */
+.SignupContainer {
+  border: 1px solid rgb(0, 0, 0);
+  width: 90%;
+  max-width: 500px; /* Limit the maximum width for better readability */
+  margin: auto;
+  padding: 2rem;
+  border-radius: 0.5rem; /* Rounded corners for a softer look */
+  background-color:rgba(255,255,255,0.5); /* Light background color */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+  margin-top: 10rem !important;
+}
+
+/* Signup form styles */
+.SignupContainer form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; 
+}
+
+.home_body{
+  background-color: bisque;
+}
+
+/* home */
+.hero__subtitle img{
+  width: 2.3rem;
+  height: 2.3rem;
+}
+
+.hero__content h1{
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: var(--heading-color);
+}
+
+.hero__content h1 .highlight{
+  color:var(--secondary-color);
+}
+
+.hero__content p{
+  font-size: 1.1rem;
+  color:var(--text-color);
+  line-height: 2rem;
+}
+
+.hero__img-box img, .hero__img-box video{
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+  border: 1px solid var(--secondary-color);
+  object-fit: cover;
+}
+
+.hero__content{
+  padding-top: 3.5rem;
+}
+
+.hero__img-box{
+  padding-top: 2rem;
+}
+
+.services__subtitle{
+  font-size:2.2rem;
+  font-weight: 500;
+  color: #ee6e6e;
+  font-family: var(--subtitle-font-name);
+}
+
+.services__title{
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.featured__tour-title{
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+.experience__content h2{
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.experience__content p{
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-top: 1rem;
+}
+
+.counter__wrapper{
+  margin-top: 2.5rem;
+}
+
+.counter__box span{
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 10px 5px 10px 5px;
+}
+
+.counter__box h6{
+  font-size: 1.1rem;
+  margin-top: 0.7rem;
+  color:var(--text-color)
+}
+
+.experience__img img{
+  width: 90%;
+}
+
+/* styles.css */
+.hero-section {
+  margin-top: 7%;
+}
+
+.hero__subtitle {
+  display: flex;
+  align-items: center;
+}
+
+.about_us{
+  height: 100vh;
+}
+
+.gallery-section {
+  margin-top: -12%;
+}
+
+.how_to_use{
+  margin-left:30%;
+  margin-top:20px;
+}
+
+.how-to-use-section {
+  margin-top: 7%;
+}
+
+.footer-section {
+  background-color: grey;
+  margin-top: 5%;
+}
+
+
+.gallery__title{
+  font-size: 2.3rem;
+  margin-bottom: 2.5rem;
+  margin-top: 1rem;
+}
+
+.masonry__img{
+  transition: .3s;
+}
+
+.masonry__img:hover{
+  transform: scale(1.1);
+}
+
+.testimonial__title{
+  font-size: 2.3rem;
+  margin-top: 1rem;
+}
+
+
+.logo_img{
+  height: 50px;
+
+}
+
+.card1{
+  margin-top: 25%;
+}
+
+.logo-img{
+  height: 50px;
+  border-radius: 1rem;
+}
+
+.button{
+  margin-left: 27%;
+}
+
+.SignupContainer form input {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc; /* Lighter border color */
+  outline: none;
+  border-radius: 0.3rem;
+  width: 100%;
+  transition: border-color 0.3s ease-in-out; 
+}
+
+.SignupContainer form input:focus {
+  border-color: #007bff; 
+}
+
+.SignupContainer form button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: #007bff; /* Blue button color */
+  color: white; /* White text color */
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+}
+
+.SignupContainer form button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+.fill-fields-error{
+  color: red;
+  padding: 0.2rem;
+  transition: all 0.4s;
+  
+}
+
+/* Navbar container */
+nav {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation items */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navigation links */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav .nav-right {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul li a.active {
+  background-color: white;
+  color: #333;
+  border-radius: 0.2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+nav .nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+
+}
+
+.hamburger-icon{
+  display: none;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Hamburger icon styles */
+.hamburger-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Media query for mobile and tablet devices */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+    align-items: flex-start;
+    position: relative;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hamburger-icon {
+    display: block;
+  }
+
+  .nav-right {
+    background-color: #333;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav-right.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 0.5rem;
+    text-align: center;
   }
 }
